@@ -16,4 +16,20 @@
 - 创建版本库：**git init;**
 - 将文件添加到暂存区：**git add filename;**
 - 将文件提交到仓库：**git commit -m '描述提交内容';**
-- 
+- 查看文件修改内容：**git diff filename;**
+- 查看版本提交记录：**git log;** **git log –pretty=oneline**
+- 版本回退：
+	+ **git reset --hard HEAD^(回退至上一版本)**
+	+ **git reset --hard 版本号**
+	+ **git reset --hard HEAD~100(回退至上100个版本)**
+- 撤销工作区修改：**git checkout --filename;**
+- 本地仓库关联github远程仓库：**git remote add origin https://github.com/repositorypath/repositoryname.git;**
+- 本地库内容推送到远程：**git push origin master;第一次推送需要加上-u参数 git push -u origin master;**
+- 从远程库克隆本地库：**git clone http://github...;**
+- 查看分支：**git branch；**
+- 创建分支：**git branch branchname；**
+- 创建分支：**git checkout branchname;**
+- 创建并切换分支：**git checkout -b branchname；（等于下面两条命令）**
+- 合并指定分支到当前分支上:**git merge branchname;**
+- 删除分支：**git branch –d name;**
+- lalala
