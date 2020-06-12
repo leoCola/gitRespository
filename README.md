@@ -30,7 +30,18 @@
 - 创建分支：**git branch branchname；**
 - 切换分支：**git checkout branchname;**
 - 创建并切换分支：**git checkout -b branchname；（等于下面两条命令）**
-- 合并指定分支到当前分支上:**git merge branchname;**
+- 合并指定分支到当前分支上:**git merge branchname;  git merge –no-ff -m “注释” dev**
 - 删除分支：**git branch –d name;**
-- 如何解决冲突:
+- 隐藏工作现场：**git stash;**
+- 查看stash：**git stash list**
+- 恢复工作现场：**git stash apply; git stash dorp(恢复后删除stash)；**
+- 恢复并删除stash:**git stash pop;**
+- 创建远程origin分支到本地：**git checkout –b dev origin/dev;**
 
+## 多人协作工作模式一般是这样的：
+
+首先，可以试图用git push origin branch-name推送自己的修改.
+如果推送失败，则因为远程分支比你的本地更新早，需要先用git pull试图合并。
+如果合并有冲突，则需要解决冲突，并在本地提交。再用git push origin branch-name推送。
+git pull失败，原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接：
+git branch --set-upstream dev origin/dev;
