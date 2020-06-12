@@ -28,7 +28,7 @@
 - 从远程库克隆本地库：**git clone http://github...;**
 - 查看分支：**git branch；**
 - 创建分支：**git branch branchname；**
-- 创建分支：**git checkout branchname;**
+- 切换分支：**git checkout branchname;**
 - 创建并切换分支：**git checkout -b branchname；（等于下面两条命令）**
 - 合并指定分支到当前分支上:**git merge branchname;**
 - 删除分支：**git branch –d name;**
