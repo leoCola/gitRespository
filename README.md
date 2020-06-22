@@ -36,7 +36,7 @@
 - 查看stash：**git stash list**
 - 恢复工作现场：**git stash apply; git stash dorp(恢复后删除stash)；**
 - 恢复并删除stash:**git stash pop;**
-- 创建远程origin分支到本地：**git checkout –b dev origin/dev;**
+- 创建远程origin分支到本地：**git checkout –b dev（本地分支名字） origin/dev（远程分支名字）;**
 
 ## 多人协作工作模式一般是这样的：
 

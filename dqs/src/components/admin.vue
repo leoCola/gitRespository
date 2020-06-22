@@ -42,44 +42,42 @@
 </template>
 
 <script>
+  export default {
+    data() {
 
-export default {
-  data() {
-    
-    return {
-      uname:""
-    };
-  },
-
- mounted: function() {
-    this.init();
-  },
-  methods:{
-    init(){
-      this.uname = sessionStorage.getItem("uname");
+      return {
+        uname: ""
+      };
     },
-    handleCommand(command) {
-      if (command == "goHome") {
-        this.$router.push("/");
-        return;
+
+    mounted: function() {
+      this.init();
+    },
+    methods: {
+      init() {
+        this.uname = sessionStorage.getItem("uname");
+      },
+      handleCommand(command) {
+        if (command == "goHome") {
+          this.$router.push("/");
+          return;
+        }
+
       }
-      
     }
-  }
-  
-};
+
+  };
 </script>
 
 
 <style scoped>
-.el-header {
-  background-color: #b3c0d1;
-  color: #333;
-  line-height: 60px;
-}
+  .el-header {
+    background-color: #b3c0d1;
+    color: #333;
+    line-height: 60px;
+  }
 
-.el-aside {
-  color: #333;
-}
+  .el-aside {
+    color: #333;
+  }
 </style>
-
